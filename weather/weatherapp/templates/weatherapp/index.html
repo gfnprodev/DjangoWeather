@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'weatherapp/style.css' %}">
+</head>
+<body>
+  <header>
+    <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
+  </header>
+  <main>
+            <section class="location">
+                <div class="city">{{ locate }}</div>
+                <div class="date">{{ today }}</div>
+            </section>
+
+            <div class="current">
+                <div class="temp">{{ temperature }}<span>°C</span></div>
+                <div class="weather">{{ weather }}</div>
+            </div>
+      <script type="text/javascript" src="{% static 'weatherapp/js/main.js' %}"></script>
+  </main>
+</body>
+</html>
